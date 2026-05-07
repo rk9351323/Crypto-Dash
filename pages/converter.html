@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converter – CryptoDash</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/converter.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="converter-page">
+  <div id="header"></div>
+  <main class="container converter-main">
+
+    <!-- Converter Section -->
+    <section class="converter-section">
+
+      <!-- Converter Card -->
+      <article class="converter-card">
+
+        <!-- Heading -->
+        <header class="converter-header">
+
+          <h1 class="title">
+            Crypto & Currency Converter
+          </h1>
+
+          <p class="subtitle">
+            Convert crypto coins and currencies in real-time
+          </p>
+
+        </header>
+
+        <!-- Converter Form -->
+        <form id="converterForm">
+
+          <!-- Amount Input -->
+          <section class="input-section">
+
+            <label for="amount">
+              Enter Amount
+            </label>
+
+            <input 
+              type="number"
+              id="amount"
+              placeholder="Enter amount"
+              value="1"
+              min="1"
+            >
+
+          </section>
+
+          <!-- Currency Selection -->
+          <section class="currency-section">
+
+            <!-- From Currency -->
+            <article class="currency-box">
+
+              <label for="fromCurrency">
+                From
+              </label>
+
+              <select id="fromCurrency">
+
+                <optgroup label="Crypto">
+
+                  <option value="bitcoin">
+                    BTC
+                  </option>
+
+                  <option value="ethereum">
+                    ETH
+                  </option>
+
+                  <option value="dogecoin">
+                    DOGE
+                  </option>
+
+                </optgroup>
+
+                <optgroup label="Currency">
+
+                  <option value="usd">
+                    USD
+                  </option>
+
+                  <option value="inr">
+                    INR
+                  </option>
+
+                  <option value="eur">
+                    EUR
+                  </option>
+
+                </optgroup>
+
+              </select>
+
+            </article>
+
+            <!-- Swap Button -->
+            <aside class="swap-box">
+
+              <button type="button" id="swapBtn">
+
+                ⇄
+
+              </button>
+
+            </aside>
+
+            <!-- To Currency -->
+            <article class="currency-box">
+
+              <label for="toCurrency">
+                To
+              </label>
+
+              <select id="toCurrency">
+
+                <optgroup label="Currency">
+
+                  <option value="inr">
+                    INR
+                  </option>
+
+                  <option value="usd">
+                    USD
+                  </option>
+
+                  <option value="eur">
+                    EUR
+                  </option>
+
+                </optgroup>
+
+                <optgroup label="Crypto">
+
+                  <option value="bitcoin">
+                    BTC
+                  </option>
+
+                  <option value="ethereum">
+                    ETH
+                  </option>
+
+                  <option value="dogecoin">
+                    DOGE
+                  </option>
+
+                </optgroup>
+
+              </select>
+
+            </article>
+
+          </section>
+
+          <!-- Convert Button -->
+          <footer class="converter-footer">
+
+            <button type="submit" id="convertBtn">
+
+              Convert Now
+
+            </button>
+
+          </footer>
+
+        </form>
+
+        <!-- Loading Text -->
+        <section id="loading">
+
+          <p>
+            Loading...
+          </p>
+
+        </section>
+
+        <!-- Result Section -->
+        <section id="result-section">
+
+          <h2 class="result-heading">
+            Conversion Result
+          </h2>
+
+          <p id="result">
+
+           
+
+          </p>
+
+        </section>
+
+      </article>
+
+    </section>
+
+  </main>
+  <div id="footer"></div>
+  <script src="../js/loader.js"></script>
+  <script type="module" src="../js/api.js"></script>
+  <script type="module" src="../js/dashboard.js"></script>
+</body>
+</html>

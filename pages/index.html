@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CryptoDash – Real-Time Market Tracker</title>
+    <meta
+      name="description"
+      content="Track live cryptocurrency and stock prices with real-time charts."
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/converter.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <main class="dashboard">
+      <h1>CryptoDash</h1>
+
+      <div class="search-container">
+        <div class="input-wrapper">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search for Bitcoin, Ethereum..."
+            autocomplete="off"
+          />
+          <button id="search-btn" class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div id="error-msg" class="error-msg"></div>
+      </div>
+
+      <div id="results"></div>
+
+      <div class="market-movers" id="market-movers">
+        <div class="mover-card">
+          <h3>🚀 Top Gainers (24h)</h3>
+          <ul id="gainers-list">
+            <p class="loading">Loading...</p>
+          </ul>
+        </div>
+        <div class="mover-card">
+          <h3>📉 Top Losers (24h)</h3>
+          <ul id="losers-list">
+            <p class="loading">Loading...</p>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="priceChart"></canvas>
+      </div>
+      <h5 id="searchcoinChart">Search for coin real-time chart</h5>
+
+      <section id="favorites">
+        <h2>My Favorites</h2>
+        <ul id="favList"></ul>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/loader.js"></script>
+    <script type="module" src="../js/dashboard.js"></script>
+  </body>
+</html>

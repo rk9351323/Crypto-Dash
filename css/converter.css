@@ -1,0 +1,188 @@
+/* Page Background and Main padding */
+.converter-page {
+  background: var(--bg);
+}
+
+.converter-main {
+  min-height: calc(100vh - 150px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  margin-bottom: 0;
+}
+
+.converter-section {
+  width: 100%;
+}
+
+.converter-card{
+  width:100%;
+  max-width:480px;
+  background:#1e293b;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 0 25px rgba(0,0,0,0.4);
+  margin:0 auto;
+}
+
+/* Header */
+
+.converter-header{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.title{
+  color:white;
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  color:#94a3b8;
+  font-size:15px;
+}
+
+/* Form */
+
+#converterForm{
+  width:100%;
+}
+
+/* Input Section */
+
+.input-section{
+  margin-bottom:25px;
+}
+
+.input-section label,
+.currency-box label{
+  display:block;
+  margin-bottom:8px;
+  color:#cbd5e1;
+  font-size:15px;
+}
+
+/* Inputs */
+
+.input-section input,
+.currency-box select{
+  width:100%;
+  padding:14px;
+  border:none;
+  outline:none;
+  border-radius:12px;
+  background:#334155;
+  color:white;
+  font-size:16px;
+}
+
+/* Currency Row */
+
+.currency-section{
+  display:flex;
+  align-items:flex-end;
+  gap:15px;
+  margin-bottom:25px;
+}
+
+.currency-box{
+  flex:1;
+}
+
+/* Swap Button */
+
+.swap-box{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#swapBtn{
+  width:55px;
+  height:55px;
+  border:none;
+  border-radius:50%;
+  background:#3b82f6;
+  color:white;
+  font-size:24px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#swapBtn:hover{
+  transform:rotate(180deg);
+  background:#2563eb;
+}
+
+/* Convert Button */
+
+.converter-footer{
+  margin-top:10px;
+}
+
+#convertBtn{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#06b6d4;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#convertBtn:hover{
+  background:#0891b2;
+}
+
+/* Loading */
+
+#loading{
+  text-align:center;
+  margin-top:20px;
+  color:#94a3b8;
+  display:none;
+}
+
+/* Result Section */
+
+#result-section{
+  margin-top:25px;
+  background:#0f172a;
+  padding:20px;
+  border-radius:14px;
+  text-align:center;
+}
+
+.result-heading{
+  color:#cbd5e1;
+  margin-bottom:10px;
+  font-size:18px;
+}
+
+#result{
+  color:#38bdf8;
+  font-size:24px;
+  font-weight:bold;
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+  .currency-section{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .swap-box{
+    margin:0 auto;
+  }
+
+  #swapBtn{
+    transform:rotate(90deg);
+  }
+}
