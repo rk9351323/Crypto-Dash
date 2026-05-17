@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const basePath = window.location.pathname.includes('/pages/') ? '../' : './';
 
   // Load Header
-  fetch(basePath + 'components/header.html')
+  fetch(basePath + 'Components/header.html')
     .then(response => response.text())
     .then(data => {
       // Fix relative paths in the loaded HTML based on the current page's depth
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .catch(error => console.error('Error loading header:', error));
 
   // Load Footer
-  fetch(basePath + 'components/footer.html')
+  fetch(basePath + 'Components/footer.html')
     .then(response => response.text())
     .then(data => {
       // Fix relative paths in the loaded HTML based on the current page's depth
